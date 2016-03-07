@@ -1,12 +1,9 @@
-# Instant.io [![travis][travis-image]][travis-url]
+# gInstant 
 
-[travis-image]: https://img.shields.io/travis/feross/instant.io/master.svg
-[travis-url]: https://travis-ci.org/feross/instant.io
-
-### Streaming file transfer over WebTorrent
+### Streaming file transfer over WebTorrent in a Commnunity Network
 
 Download/upload files using the [WebTorrent](http://webtorrent.io) protocol (BitTorrent
-over WebRTC). This is a beta.
+over WebRTC). This is a beta. Using [instant.io](https://github.com/feross/instant.io).
 
 Powered by [WebTorrent](http://webtorrent.io), the first torrent client that works in the
 browser without plugins. WebTorrent is powered by JavaScript and WebRTC. Supports Chrome,
@@ -26,8 +23,8 @@ To get a clone of https://instant.io running on your own server, follow these in
 Get the code:
 
 ```
-git clone https://github.com/feross/instant.io
-cd instant.io
+git clone https://github.com/agustim/ginstant
+cd ginstant
 npm install
 ```
 
