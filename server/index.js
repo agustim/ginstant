@@ -30,8 +30,8 @@ var CORS_WHITELIST = [
 var secret, secretKey, secretCert
 try {
   secret = require('../secret')
-  secretKey = fs.readFileSync(path.join(__dirname, '../secret/instant.io.key'))
-  secretCert = fs.readFileSync(path.join(__dirname, '../secret/instant.io.chained.crt'))
+  secretKey = fs.readFileSync(path.join(__dirname, '../secret/secret.key'))
+  secretCert = fs.readFileSync(path.join(__dirname, '../secret/secret.cert'))
 } catch (err) {}
 
 var app = express()
