@@ -12,6 +12,7 @@ var xhr = require('xhr')
 
 var util = require('./util')
 
+/*
 global.WEBTORRENT_ANNOUNCE = createTorrent.announceList
   .map(function (arr) {
     return arr[0]
@@ -19,6 +20,10 @@ global.WEBTORRENT_ANNOUNCE = createTorrent.announceList
   .filter(function (url) {
     return url.indexOf('wss://') === 0 || url.indexOf('ws://') === 0
   })
+*/
+
+global.WEBTORRENT_ANNOUNCE = ['ws://' + window.location.hostname + ':8000/']
+console.log(global.WEBTORRENT_ANNOUNCE)
 
 if (!WebTorrent.WEBRTC_SUPPORT) {
   util.error('This browser is unsupported. Please use a browser with WebRTC support.')
@@ -29,12 +34,13 @@ var getClient = thunky(function (cb) {
     if (err && window.location.hostname === 'instant.io') {
       if (err) util.error(err)
       createClient(rtcConfig)
-    } else if (err) {
+    } /*else if (err) {
       getRtcConfig('https://instant.io/rtcConfig', function (err, rtcConfig) {
         if (err) util.error(err)
         createClient(rtcConfig)
       })
-    } else {
+    }
+    */ else {
       createClient(rtcConfig)
     }
   })
