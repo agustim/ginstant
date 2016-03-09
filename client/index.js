@@ -85,7 +85,8 @@ function onHashChange () {
 window.addEventListener('beforeunload', onBeforeUnload)
 
 // Register a protocol handler for "magnet:" (will prompt the user)
-navigator.registerProtocolHandler('magnet', window.location.origin + '#%s', 'Instant.io')
+// Disabled!
+//navigator.registerProtocolHandler('magnet', window.location.origin + '#%s', 'Instant.io')
 
 function getRtcConfig (url, cb) {
   xhr(url, function (err, res) {
